@@ -7,6 +7,7 @@ insval = int(input('Enter the insertion value: '))
 # Make your Code
 # ******************************
 prevNum = numbers[0]
+counter = 0
 for n in numbers:
     if insval > prevNum and insval < n:
         numbers.insert(numbers.index(n), insval)
@@ -16,7 +17,12 @@ for n in numbers:
     elif insval > n and insval > prevNum:
         numbers.insert(len(numbers), insval)
         break
+    elif insval > n and counter == len(numbers) - 1: 
+        numbers.insert(len(numbers), insval)
+        break
+
 
     prevNum = n
+    counter += 1
     
 print (numbers)
