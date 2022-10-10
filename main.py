@@ -13,4 +13,4 @@ for n in numbers:
 
     prevNum = n
     
-prinnt (numbers)
+print (numbers)
